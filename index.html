@@ -108,10 +108,32 @@
       }
     }
 
+    .message {
+      position: absolute;
+      top: 40%;
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      color: #333;
+      z-index: 6;
+      animation: fadeOut 1.5s ease-out 2s forwards;
+    }
+
+    .message.hidden {
+      display: none;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+    }
   </style>
 </head>
 <body>
   <div class="wrapper">
+    <div id="custom-message" class="message hidden"></div>
     <div class="knot"></div>
     <div class="card-stack">
       <a href="https://www.theknot.com/AdrianAndKaren2025" target="_blank">
@@ -123,5 +145,16 @@
     <div class="flap left"></div>
     <div class="flap right"></div>
   </div>
+  <script>
+    // Parse "to" parameter from URL and show message if specified
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("to");
+    const messageDiv = document.getElementById("custom-message");
+
+    if (name) {
+      messageDiv.textContent = `To ${name}...`;
+      messageDiv.classList.remove("hidden");
+    }
+  </script>
 </body>
 </html>
