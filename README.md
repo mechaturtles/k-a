@@ -9,3 +9,5 @@ For example: [mechaturtles.com/ka25/?to=Bryce%20&%20Agatha](mechaturtles.com/ka2
 
 # Credits
 This is dedicated to my Agatha, who designed the seal and cursive names by hand and helped me make a lot of the physical invitations for this wedding.
+
+Oh, and Mr. ChatGPT. He slips here and there, but he made my vision possible.
